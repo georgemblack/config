@@ -19,6 +19,7 @@ cask "appcleaner"
 cask "paw"
 cask "visual-studio-code"
 cask "netnewswire"
+cask "monodraw"
 
 mas "1Password", id: 1333542190
 mas "Amphetamine", id: 937984704
