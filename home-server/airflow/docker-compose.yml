@@ -6,4 +6,4 @@ services:
     container_name: airflow
     restart: always
     ports:
-      - 9002:8080
+      - 9000:8080
