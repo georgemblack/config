@@ -1,0 +1,23 @@
+upstream servicename {
+	server servicename:8080;
+}
+
+server {
+	listen 8080;
+
+	server_name example.com;
+
+	location / {
+        proxy_pass              http://servicename;
+		proxy_redirect          http:// https://;	
+		proxy_set_header        Host $host;
+		proxy_set_header        X-Real-IP $remote_addr;
+		proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header        X-Forwarded-Proto $scheme;
+		proxy_request_buffering off;
+		proxy_buffering         off;
+	}
+
+	access_log  /path/to/example.com.access.log;
+	error_log   /path/to/example.com.error.log;
+}

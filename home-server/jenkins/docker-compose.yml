@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  jenkins:
+    build: .
+    container_name: jenkins
+    restart: always
+    ports:
+      - 9001:8080
+    volumes:
+      - $HOME/data/jenkins:/var/jenkins_home
+      - $HOME/public:/var/public
+      - /var/run/docker.sock:/var/run/docker.sock
+
+networks:
+  default:
+    external:
+      name: lionshare

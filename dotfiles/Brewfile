@@ -1,0 +1,29 @@
+tap "homebrew/cask"
+cask_args appdir: "/Applications"
+
+brew "awscli"
+brew "nvm"
+brew "pyenv"
+brew "rbenv"
+brew "yarn"
+
+cask "transmit"
+cask "fork"
+cask "alfred"
+cask "backblaze"
+cask "sublime-text"
+cask "imageoptim"
+cask "firefox"
+cask "tableplus"
+cask "appcleaner"
+cask "paw"
+cask "visual-studio-code"
+cask "netnewswire"
+
+mas "1Password", id: 1333542190
+mas "Amphetamine", id: 937984704
+mas "Pixelmator Pro", id: 1289583905
+mas "Tabs to Links", id: 1451408472
+mas "DaisyDisk", id: 411643860
+mas "iA Writer", id: 775737590
+mas "Day One", id: 1055511498

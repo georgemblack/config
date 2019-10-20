@@ -1,0 +1,32 @@
+server {
+	listen 443 ssl http2 default_server;
+	listen [::]:443 ssl http2 default_server;
+
+	server_name example.com www.example.com;
+	
+	ssl_certificate /path/to/examplecom.crt;
+	ssl_certificate_key /path/to/examplecom.key;
+
+	# Ensure all connections are from Cloudflare
+	ssl_client_certificate /path/to/cloudflare.crt;
+	ssl_verify_client on;
+	
+	root /path/to/static/files;
+	index index.html;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
+
+	# Default caching
+	expires 12h;
+	add_header Cache-Control "public";
+
+	# Caching static assets for longer
+	location ~* \.(jpg|jpeg|png|webp|mov|ico)$ {
+		expires 90d;	
+	}
+
+	access_log /path/to/example.com.access.log;
+	error_log /path/to/example.com.error.log;
+}

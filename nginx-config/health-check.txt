@@ -1,0 +1,11 @@
+server {
+	listen 80 default_server;
+
+	server_name example.com
+
+	add_header Content-Type text/plain;
+	add_header Cache-Control no-cache;
+	return 200 'Healthy!';
+
+	access_log off;
+}
