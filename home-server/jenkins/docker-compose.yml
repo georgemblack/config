@@ -11,8 +11,3 @@ services:
       - $HOME/data/jenkins:/var/jenkins_home
       - $HOME/public:/var/public
       - /var/run/docker.sock:/var/run/docker.sock
-
-networks:
-  default:
-    external:
-      name: lionshare
