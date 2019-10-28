@@ -1,0 +1,22 @@
+[hk0]>[null]
+[prnt]>[null]
+[pause]>[null]
+[del]>[null]
+{hk1}>{x1}{-shift}{-ctrl}{-alt}{a}{+shift}{+ctrl}{+alt}
+{hk2}>{x1}{-shift}{-ctrl}{-alt}{b}{+shift}{+ctrl}{+alt}
+{hk3}>{x1}{-shift}{-ctrl}{-alt}{c}{+shift}{+ctrl}{+alt}
+{hk4}>{x1}{-shift}{-ctrl}{-alt}{d}{+shift}{+ctrl}{+alt}
+{hk5}>{x1}{-shift}{-ctrl}{-alt}{e}{+shift}{+ctrl}{+alt}
+{hk6}>{x1}{-shift}{-ctrl}{-alt}{f}{+shift}{+ctrl}{+alt}
+[caps]>[null]
+{hk7}>{x1}{-shift}{-ctrl}{-alt}{g}{+shift}{+ctrl}{+alt}
+{hk8}>{x1}{-shift}{-ctrl}{-alt}{h}{+shift}{+ctrl}{+alt}
+[lwin]>[null]
+[lalt]>[alt]
+[lspc]>[lwin]
+[ralt]>[alt]
+[rctrl]>[ctrl]
+fn [lwin]>[alt]
+fn [lalt]>[lwin]
+fn [ralt]>[lwin]
+fn [rctrl]>[alt]
