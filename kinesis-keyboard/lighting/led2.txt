@@ -1,1 +1,1 @@
-[pulse]>[spd5]
+[wave]>[spd5][dirright]
