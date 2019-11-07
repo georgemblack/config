@@ -6,6 +6,8 @@ brew "nvm"
 brew "pyenv"
 brew "rbenv"
 brew "yarn"
+brew "kubectl"
+brew "doctl"
 
 cask "transmit"
 cask "fork"
