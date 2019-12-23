@@ -8,6 +8,8 @@ brew "rbenv"
 brew "yarn"
 brew "kubectl"
 brew "doctl"
+brew "hey"
+brew "ffmpeg"
 
 cask "transmit"
 cask "fork"
