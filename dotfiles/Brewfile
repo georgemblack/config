@@ -11,6 +11,7 @@ brew "doctl"
 brew "hey"
 brew "ffmpeg"
 brew "go"
+brew "imagemagick"
 
 cask "transmit"
 cask "fork"
