@@ -12,6 +12,8 @@ brew "hey"
 brew "ffmpeg"
 brew "go"
 brew "imagemagick"
+brew "broot"
+brew "terraform"
 
 cask "transmit"
 cask "fork"
