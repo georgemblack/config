@@ -81,18 +81,6 @@ resource "aws_s3_bucket_policy" "backup" {
           "aws:SecureTransport": "false"
         }
       }
-    },
-    {
-      "Sid": "EnforceDefaultEncryption",
-      "Action": "s3:PutObject",
-      "Effect": "Deny",
-      "Principal": "*",
-      "Resource": "arn:aws:s3:::${var.bucket_name}/*",
-      "Condition": {
-        "StringNotEquals": {
-          "s3:x-amz-server-side-encryption": "AES256"
-        }
-      }
     }
   ]
 }
