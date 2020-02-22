@@ -4,7 +4,6 @@ docker container run -d \
 	-e POSTGRES_PASSWORD=password \
 	-e POSTGRES_USER=postgres-user \
 	-e POSTGRES_DB=exampledb \
-	--restart always \
 	--name postgres-example \
 	postgres
 
