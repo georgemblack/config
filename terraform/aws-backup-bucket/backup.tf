@@ -22,15 +22,16 @@ resource "aws_s3_bucket" "backup" {
       days          = 1
       storage_class = "DEEP_ARCHIVE"
     }
-  }
 
-  lifecycle_rule {
-    id      = "expire"
-    enabled = true
+    expiration {
+      expired_object_delete_marker = true
+    }
 
     noncurrent_version_expiration {
       days = 365
     }
+
+    abort_incomplete_multipart_upload_days = 30
   }
 }
 
@@ -58,8 +59,8 @@ resource "aws_s3_bucket_policy" "backup" {
       "Effect": "Deny",
       "NotPrincipal": {
         "AWS": [
-          "arn:aws:iam::${var.aws_account_id}:user/${var.default_user}",
-          "arn:aws:iam::${var.aws_account_id}:root"
+          "arn:aws:iam::${var.aws_account_id}:root",
+          "arn:aws:iam::${var.aws_account_id}:user/${var.default_user}"
         ]
       },
       "Resource": [
@@ -79,6 +80,18 @@ resource "aws_s3_bucket_policy" "backup" {
       "Condition": {
         "Bool": {
           "aws:SecureTransport": "false"
+        }
+      }
+    },
+    {
+      "Sid": "EnforceServerSideEncryption",
+      "Action": "s3:PutObject",
+      "Effect": "Deny",
+      "Principal": "*",
+      "Resource": "arn:aws:s3:::${var.bucket_name}/*",
+      "Condition": {
+        "Null": {
+            "s3:x-amz-server-side-encryption": "true"
         }
       }
     }
