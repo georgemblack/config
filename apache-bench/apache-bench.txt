@@ -1,0 +1,7 @@
+apt-get update && apt-get install apache2-utils
+
+ab -n 100 -c 1 http://example.com/
+ab -n 10000 -c 250 http://example.com/
+
+# Create 1MB file
+dd if=/dev/urandom bs=786438 count=1 | base64 > /var/www/html/index.html
