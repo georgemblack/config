@@ -14,5 +14,9 @@
     "window.autoDetectColorScheme": true,
     "[yaml]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.associations": {
+        "*.html.template": "gohtml",
+        "*.xml.template": "gogo",
     }
 }
