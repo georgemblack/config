@@ -38,7 +38,7 @@
       },
       "background" : "#FFFFFF00",
       "roundness" : 0,
-      "paddingVertical" : 0
+      "paddingVertical" : 5
     },
     "window" : {
       "color" : "#0E0E0EBE",
