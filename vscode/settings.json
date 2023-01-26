@@ -1,22 +1,29 @@
 {
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[scss]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "editor.fontFamily": "'JetBrains Mono', monospace",
-    "editor.fontLigatures": true,
-    "go.useLanguageServer": true,
-    "window.autoDetectColorScheme": true,
-    "[yaml]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "files.associations": {
-        "*.html.template": "gohtml",
-        "*.xml.template": "gogo",
-    }
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": false
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "SF Mono",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editor.showTabs": false,
+  "workbench.tree.indent": 16,
+  "window.autoDetectColorScheme": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.fontSize": 13,
+  "editor.fontLigatures": true
 }
