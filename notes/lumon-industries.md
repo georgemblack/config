@@ -113,3 +113,11 @@ sudo usermod -aG www-data georgeblack
 ```
 
 Move data to/from this directory as needed.
+
+## Misc
+
+When modifying files in `/var/www/html`, i.e. upgrading Kirby, be sure to set `www-data` as the owning group/user:
+
+```
+sudo chown -R www-data:www-data /var/www/html
+```
