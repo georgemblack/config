@@ -121,3 +121,24 @@ When modifying files in `/var/www/html`, i.e. upgrading Kirby, be sure to set `w
 ```
 sudo chown -R www-data:www-data /var/www/html
 ```
+
+When uploading files via the Kirby UI, you may run into a max file size error:
+
+```
+The uploaded file exceeds the upload_max_filesize directive in php.ini
+```
+
+This is a PHP configuration option that needs to be changed. The `php.ini` file resides in:
+
+```
+/etc/php/8.X/cli/php.ini
+/etc/php/8.X/apache2/php.ini
+```
+
+Update the following field:
+
+```
+upload_max_filesize = 100M
+```
+
+The system may need to be restarted.
