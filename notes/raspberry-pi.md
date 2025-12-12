@@ -4,10 +4,10 @@ The following is documentation for the [Lumon Industries](https://severance.wiki
 
 ## Connecting
 
-Lumon Industries systems are only available on the home network. To connect:
+Lumon Industries systems are only available via Cloudflare Access for Infrastructure. When connected to a WARP client in the correct Zero Trust organization, connect by:
 
 ```
-ssh georgeblack@lumonindustries.local
+ssh georgeblack@192.168.4.189
 ```
 
 A local alias can connect quickly:
@@ -16,7 +16,12 @@ A local alias can connect quickly:
 lumon
 ```
 
-The appropriate SSH key is stored in 1Password.
+Note the following:
+
+* WARP split tunnel settings ensure 192.168.4.189 is directed to Cloudflare, not the local network
+* A route forwards 192.168.4.189 to the Raspberry Pi tunnel
+* A reserved IP (via Eero app) ensures the Raspberry Pi will always have 192.168.4.189
+* Access for Infrastructure handles provisioning short-lived certificates for SSH
 
 ## Configuring & Updating
 
@@ -142,3 +147,18 @@ upload_max_filesize = 100M
 ```
 
 The system may need to be restarted.
+
+# SSH Setup
+
+SSH is configured to accept all logins from Cloudflare Access for Infrastructure. The Cloudflare public key is added to:
+
+```
+/etc/ssh/ca.pub
+```
+
+And `/etc/ssh/sshd_config` has been modified:
+
+```
+PubkeyAuthentication yes
+TrustedUserCAKeys /etc/ssh/ca.pub
+```

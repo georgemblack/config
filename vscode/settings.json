@@ -34,7 +34,6 @@
   },
   "editor.fontFamily": "SF Mono",
   "editor.fontLigatures": true,
-  "editor.fontSize": 13,
   "editor.formatOnSave": true,
   "editor.inlineSuggest.enabled": true,
   "editor.stickyScroll.enabled": true,
